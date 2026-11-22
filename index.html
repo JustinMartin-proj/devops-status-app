@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production App - Status Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 2rem;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            color: #58a6ff;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border-radius: 12px;
+            background-color: #238636;
+            color: #ffffff;
+        }
+        .meta {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Deployment Status</h1>
+        <p>Environment: <strong>Staging</strong></p>
+        <p>Status: <span class="badge">HEALTHY</span></p>
+        <div class="meta">
+            <p>App Version: v1.0.0</p>
+            <p>Maintainer: DevOps Team</p>
+        </div>
+    </div>
+</body>
+</html>
