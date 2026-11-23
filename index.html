@@ -1,95 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoDaddy - Domain & Hosting Status</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f5f7f8;
-            color: #111111;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background-color: #ffffff;
-            border: 1px solid #d4dbe0;
-            border-top: 5px solid #00a4a6; /* GoDaddy Signature Teal */
-            border-radius: 8px;
-            padding: 2rem;
-            max-width: 450px;
-            width: 100%;
-            box-shadow: 0 4px 16px rgba(17, 17, 17, 0.08);
-        }
-        .brand {
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #00a4a6;
-            margin-bottom: 0.25rem;
-        }
-        h1 {
-            color: #111111;
-            font-size: 1.5rem;
-            margin-top: 0;
-            margin-bottom: 1.25rem;
-        }
-        .info-row {
-            margin: 0.75rem 0;
-            font-size: 0.95rem;
-        }
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
-            font-weight: 700;
-            border-radius: 999px;
-            background-color: #e6f4ea;
-            color: #137333;
-            border: 1px solid #ceead6;
-        }
-        .ssl-badge {
-            display: inline-block;
-            padding: 0.2rem 0.6rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-radius: 4px;
-            background-color: #e0f7f7;
-            color: #007a7c;
-        }
-        .meta {
-            margin-top: 1.5rem;
-            font-size: 0.85rem;
-            color: #5e6c75;
-            border-top: 1px solid #e8ecef;
-            padding-top: 1rem;
-        }
-        .meta p {
-            margin: 0.35rem 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Benevolent Decor</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      color: #2b2b2b;
+      background-color: #faf9f6;
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #eae6df;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #1f1f1f;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a4a4a;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #8c6d53;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 64px 20px 40px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #1f1f1f;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      color: #666666;
+      font-size: 1.05rem;
+    }
+
+    /* Contact Cards Container */
+    .contact-container {
+      max-width: 960px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .contact-card {
+      background-color: #ffffff;
+      border: 1px solid #eae6df;
+      border-radius: 8px;
+      padding: 36px 28px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #1f1f1f;
+    }
+
+    .contact-card p {
+      font-size: 0.95rem;
+      color: #666666;
+      margin-bottom: 16px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      color: #8c6d53;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-link:hover {
+      border-bottom-color: #8c6d53;
+    }
+
+    /* Static Info Banner */
+    .hours-box {
+      max-width: 960px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+    }
+
+    .hours-inner {
+      background-color: #f2efe9;
+      border-radius: 8px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .hours-inner h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #1f1f1f;
+    }
+
+    .hours-inner p {
+      color: #555555;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffffff;
+      border-top: 1px solid #eae6df;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.875rem;
+      color: #777777;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="brand">GoDaddy Control Center</div>
-        <h1>Domain & Hosting Status</h1>
-	<h1>Justin Martin </h1> 
-        <div class="info-row">Domain: <strong>benevolentdecor.com</strong></div>
-        <div class="info-row">Hosting Plan: <strong>Managed WordPress / cPanel/ VPS / Airo  </strong></div>
 
-        <div class="info-row">DNS &amp; Domain Status: <span class="badge">ACTIVE</span></div>
-        <div class="info-row">SSL Certificate: <span class="ssl-badge">SECURED (HTTPS)</span></div>
-        <div class="meta">
-            <p>Nameservers: ://domaincontrol.com</p>
-            <p>Auto-Renew: Enabled (Registrar Lock ON)</p>
-        </div>
-    </div>
+  <header>
+    <a href="https://benevolentdecor.com" class="site-title">Benevolent Decor</a>
+    <nav>
+      <ul>
+        <li><a href="https://benevolentdecor.com">Home</a></li>
+        <li><a href="https://benevolentdecor.comblog/">Blog</a></li>
+        <li><a href="https://benevolentdecor.comcontact/" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Get in Touch</h1>
+      <p>Have a question about home styling, decor inspiration, or collaborations? Reach out directly using any of the options below.</p>
+    </section>
+
+    <section class="contact-container">
+      <div class="contact-card">
+        <h2>Email Us</h2>
+        <p>For general questions, decor inquiries, or article suggestions.</p>
+        <a href="mailto:hello@benevolentdecor.com" class="contact-link">hello@benevolentdecor.com</a>
+      </div>
+
+      <div class="contact-card">
+        <h2>Collaborations</h2>
+        <p>Interested in brand partnerships, guest features, or product reviews?</p>
+        <a href="mailto:partners@benevolentdecor.com" class="contact-link">partners@benevolentdecor.com</a>
+      </div>
+
+      <div class="contact-card">
+        <h2>Follow Along</h2>
+        <p>Stay updated with our latest home decor guides and seasonal tips.</p>
+        <a href="https://benevolentdecor.comblog/" class="contact-link">Read the Blog</a>
+      </div>
+    </section>
+
+    <section class="hours-box">
+      <div class="hours-inner">
+        <h3>Response Time</h3>
+        <p>We review all messages Monday through Friday and typically reply within 1–2 business days.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Benevolent Decor. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
-
 
