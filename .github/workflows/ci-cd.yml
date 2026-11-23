@@ -28,5 +28,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           protocol: ftp 
-          server-dir: /public_html
+          server-dir: "/public_html/"
 
