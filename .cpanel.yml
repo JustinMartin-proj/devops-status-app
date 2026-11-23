@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/lenjmjbp9pz2/public_html/status/
+    - export DEPLOYPATH=/home/lenjmjbp9pz2/public_html
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
