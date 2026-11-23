@@ -1,10 +1,11 @@
+
 name: CI-CD pipeline deployment in Cpanel
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-and-deploy:
@@ -21,7 +22,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-            server-dir: "/public_html/"
-
-
+          port: 21
+          protocol: ftp
+          server-dir: "/public_html/"
+          timeout: 60000
 
