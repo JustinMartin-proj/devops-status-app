@@ -14,18 +14,12 @@ jobs:
       - name: GoDaddy Storefront 
         uses: actions/checkout@v4
 
-      # --- Dito ilalagay ang CI (Build o Test) kung meron ---
-      # Halimbawa kung Node/React o Composer/Laravel:
-      # - name: Install & Build
-      #   run: npm install && npm run build
-
-      # --- CD: Mag-deploy lang sa cPanel kapag na-push na sa main ---
       - name: Deploy files to cPanel via FTP
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-         ftp- server: ${{ secrets.FTP_SERVER }}  
-         ftp- username: ${{ secrets.FTP_USERNAME }}
-         ftp- password: ${{ secrets.FTP_PASSWORD }}
+         ftp-server: ${{ secrets.FTP_SERVER }}  
+         ftp-username: ${{ secrets.FTP_USERNAME }}
+         ftp-password: ${{ secrets.FTP_PASSWORD }}
           server-dir: "/public_html/"
 
