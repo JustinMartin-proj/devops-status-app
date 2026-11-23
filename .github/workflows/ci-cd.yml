@@ -11,15 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: GoDaddy Storefront 
+      - name: GoDaddy Storefront
         uses: actions/checkout@v4
 
       - name: Deploy files to cPanel via FTP
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-         server: ${{ secrets.FTP_SERVER }}  
-         username: ${{ secrets.FTP_USERNAME }}
-         password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           server-dir: "/public_html/"
+
 
